@@ -1,0 +1,268 @@
+    .preview-course {
+        width: 1200px;
+        position: relative;
+        top: 20px;
+        margin: 0 auto;
+    }
+    /* 这是每个学期的样式 */
+    .preview-course .semester-ul {
+        width: 100%;
+        /* display: table; */
+    }
+    .preview-course .semester-li {
+        width: 100%;
+        /* height: 500px; */
+        /* background: yellowgreen; */
+    }
+    .preview-course .semester-span {
+        width: 181px;
+        height: 41px;
+        /* display: block; */
+        /* text-align: center; */
+        line-height: 41px;
+        font-size: 18px;
+        position: relative;
+        margin: 0 auto;
+        border: 2px solid #d2d2d2;
+        border-radius: 45px;
+        font-weight: bold;
+        color: #1b68b4;
+        /* padding: 8px 14px; */
+        cursor: pointer;
+    }
+    .preview-course .semester-span img {
+        left: 30px;
+        top: 11px;
+        float: left;
+        position: relative;
+    }
+    .preview-course .semester-span p {
+        left: 42px;
+        float: left;
+        position: relative;
+    }
+
+    /* 这是课程的样式 */
+    .preview-course .curriculum-ul {
+        width: 35%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .preview-course .curriculum-li {
+        border: 2px solid rgba(82, 80, 80, 0.8);
+        border-radius: 45px;
+        position: relative;
+    }
+    .preview-course .curriculum-span {
+        height: 20px;
+        color: rgb(70, 67, 67);
+        line-height: 20px;
+        text-align: center;
+        cursor: pointer;
+        padding: 5px 20px;
+    }
+    .preview-course .curriculum-li img {
+        top: 3px;
+        float: left;
+        position: relative;
+    }
+    .preview-course .curriculum-li .curriculum-span p {
+        font-weight: bold;
+        margin-left: 10px;
+        float: left;
+        /* position: relative; */
+    }
+    /* 通过计算index值来设置课程的左右样式 */
+    .listleft {
+        margin-top: 60px;
+
+        float: right;
+        left: -270px;
+        /* background: #1b68b4; */
+        background-color: white;
+        position: relative;
+        
+    }
+    .listright {
+        /* margin-top: 100px;
+        left: 117px;
+        float: left;
+        background: yellow;
+        position: relative; */
+        margin-top: 60px;
+        left: 268px;
+        float: left;
+        background: yellow;
+        
+    }
+    /* 绘制竖直线 */
+    .X-axis {
+        width: 1px;
+        /* height: 456px; */
+        border-left: 2px dotted grey;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+    }
+    /* 绘制横直线 */
+    .Y-axis {
+        width: 55px;
+        height: 1px;
+        border-top: 2px dotted grey;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        /* 
+        left: -91px;
+        bottom: 14px;
+        float: right; 
+        */
+    }
+
+    /* 为横直线做左侧定位 */
+    .listleft .Y-axis {
+        position: absolute;
+        right: -59px;
+        top: 14px;
+    }
+    /* 为横直线做右侧定位 */
+    .listright .Y-axis {
+        position: absolute;
+        left: -57px;
+        top: 14px;
+    }  
+
+    /* 用来确定左侧and右侧第一个课程对上部的top */
+    .curriculum-ul>li:nth-child(1) {
+        margin-top: 30px;
+    }
+    .curriculum-ul>li:nth-child(2){
+        margin-top: 75px;
+    }
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* 开始绘制点击课程之后出现的课程明细 */
+    
+
+
+
+    /* 三维数组，开始课程明细 */
+
+
+    .clickhander {
+        position: absolute;
+    }
+
+    /* 开始绘制点击课程之后出现的课程明细 */
+    /* 绘制第一步横直线 */
+    .Y-axisclick {
+        width: 200px;
+        height: 1px;
+        border-top: 2px dotted grey;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        z-index: -1;
+    }
+     /* 为横直线做左侧定位 */
+     .listleft .Y-axisclick {
+         position: relative;
+         right: 144px;
+         top: -15px;
+         z-index: -1;
+     }
+
+     /* 为横直线做右侧定位 */
+     .listright .Y-axisclick {
+         position: relative;
+         left: 130px;
+         top: -16px;
+         z-index: -1;
+     }
+
+    /* 写出竖直线 */
+    .X-axisclick {
+        width: 1px;
+        /* height: 456px; */
+        border-left: 2px solid grey;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    /* 为竖直线做左侧定位 */
+    .listleft .X-axisclick {
+        position: absolute;
+        right: 346px;
+        top: -45px;
+    }
+    /* 为竖直线做右侧定位 */
+    .listright .X-axisclick {
+        position: absolute;
+        left: 330px;
+        top: -44px;
+    }
+    /* 和数据P一起的指引左侧横直线 */
+    .listleft p .Y-axis-clicktow {
+        width: 40px;
+        height: 1px;
+        border-bottom: 2px dotted grey;
+        display: block;
+        position: relative;
+        /* margin: 0 auto; */
+        left: 115px;
+        /* z-index: -1; */
+        bottom: -10px;
+        /* margin-bottom: 31px; */
+    }
+    /* 和数据P一起的指引右侧横直线 */
+    .listright p .Y-axis-clicktow {
+        width: 40px;
+        height: 1px;
+        border-bottom: 2px dotted grey;
+        display: block;
+        position: relative;
+        /* margin: 0 auto; */
+        right: 46px;
+        /* z-index: -1; */
+        bottom: -10px;
+        /* margin-bottom: 40px; */
+    }
+    
+
+
+     
+    .listleft ul .Detailed-course-data p {
+       
+
+        position: relative;
+        left: -304px;
+        top: -59px;
+        /* margin-top: 16px; */
+        /* visibility: visible; */
+
+    }
+
+    .listright ul .Detailed-course-data p {
+       
+        position: relative;
+        left: 378px;
+        top: -57px;
+        /* margin-top: 16px; */
+    }
+    /* 用来确定左侧and右侧第一个课程对上部的top */
+    /* .clickhander-ul>li:nth-child(1) {
+        margin-top: -115px;
+    } */
